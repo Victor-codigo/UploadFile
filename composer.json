@@ -1,0 +1,19 @@
+{
+    "name": "victor-codigo/upload-file",
+    "description": "Classes to manage file uploads",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "VictorCodigo\\UploadFile\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Víctor",
+            "email": "victorrmmb@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
