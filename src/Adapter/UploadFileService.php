@@ -4,27 +4,27 @@ declare(strict_types=1);
 
 namespace VictorCodigo\UploadFile\Adapter;
 
-use App\Service\UploadFile\Domain\Exception\FileException;
-use App\Service\UploadFile\Domain\Exception\FileUploadCanNotWriteException;
-use App\Service\UploadFile\Domain\Exception\FileUploadException;
-use App\Service\UploadFile\Domain\Exception\FileUploadExtensionFileException;
-use App\Service\UploadFile\Domain\Exception\FileUploadIniSizeException;
-use App\Service\UploadFile\Domain\Exception\FileUploadNoFileException;
-use App\Service\UploadFile\Domain\Exception\FileUploadPartialFileException;
-use App\Service\UploadFile\Domain\Exception\FileUploadReplaceException;
-use App\Service\UploadFile\Domain\Exception\FileUploadSizeException;
-use App\Service\UploadFile\Domain\Exception\FileUploadTmpDirFileException;
-use App\Service\UploadFile\Domain\Exception\LogicException;
-use App\Service\UploadFile\Domain\FileInterface;
-use App\Service\UploadFile\Domain\UploadedFileInterface;
 use Symfony\Component\HttpFoundation\File\Exception\CannotWriteFileException;
 use Symfony\Component\HttpFoundation\File\Exception\ExtensionFileException;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\Exception\FormSizeFileException;
 use Symfony\Component\HttpFoundation\File\Exception\IniSizeFileException;
 use Symfony\Component\HttpFoundation\File\Exception\NoFileException;
 use Symfony\Component\HttpFoundation\File\Exception\NoTmpDirFileException;
 use Symfony\Component\HttpFoundation\File\Exception\PartialFileException;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadCanNotWriteException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadExtensionFileException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadIniSizeException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadNoFileException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadPartialFileException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadReplaceException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadSizeException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadTmpDirFileException;
+use VictorCodigo\UploadFile\Domain\Exception\LogicException;
+use VictorCodigo\UploadFile\Domain\FileInterface;
+use VictorCodigo\UploadFile\Domain\UploadedFileInterface;
 
 class UploadFileService
 {

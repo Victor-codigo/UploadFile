@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace VictorCodigo\UploadFile\Domain;
 
-use App\Service\UploadFile\Domain\Exception\FileException;
+use VictorCodigo\UploadFile\Domain\Exception\FileException;
 
 interface UploadedFileInterface
 {

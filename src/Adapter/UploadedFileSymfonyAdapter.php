@@ -4,16 +4,6 @@ declare(strict_types=1);
 
 namespace VictorCodigo\UploadFile\Adapter;
 
-use App\Service\UploadFile\Domain\Exception\FileUploadCanNotWriteException;
-use App\Service\UploadFile\Domain\Exception\FileUploadException;
-use App\Service\UploadFile\Domain\Exception\FileUploadExtensionFileException;
-use App\Service\UploadFile\Domain\Exception\FileUploadIniSizeException;
-use App\Service\UploadFile\Domain\Exception\FileUploadNoFileException;
-use App\Service\UploadFile\Domain\Exception\FileUploadPartialFileException;
-use App\Service\UploadFile\Domain\Exception\FileUploadSizeException;
-use App\Service\UploadFile\Domain\Exception\FileUploadTmpDirFileException;
-use App\Service\UploadFile\Domain\FileInterface;
-use App\Service\UploadFile\Domain\UploadedFileInterface;
 use Symfony\Component\HttpFoundation\File\Exception\CannotWriteFileException;
 use Symfony\Component\HttpFoundation\File\Exception\ExtensionFileException;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -24,6 +14,16 @@ use Symfony\Component\HttpFoundation\File\Exception\NoTmpDirFileException;
 use Symfony\Component\HttpFoundation\File\Exception\PartialFileException;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadCanNotWriteException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadExtensionFileException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadIniSizeException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadNoFileException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadPartialFileException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadSizeException;
+use VictorCodigo\UploadFile\Domain\Exception\FileUploadTmpDirFileException;
+use VictorCodigo\UploadFile\Domain\FileInterface;
+use VictorCodigo\UploadFile\Domain\UploadedFileInterface;
 
 class UploadedFileSymfonyAdapter extends FileSymfonyAdapter implements UploadedFileInterface
 {

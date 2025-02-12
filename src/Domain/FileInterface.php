@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace VictorCodigo\UploadFile\Domain;
 
-use App\Service\UploadFile\Domain\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\File;
+use VictorCodigo\UploadFile\Domain\Exception\FileException;
 
 interface FileInterface
 {
