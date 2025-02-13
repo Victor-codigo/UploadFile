@@ -129,10 +129,9 @@ class UploadedFileSymfonyAdapter extends FileSymfonyAdapter implements UploadedF
     public function move(string $directory, ?string $name = null): FileInterface
     {
         try {
-            $fileSymfonyAdapter = new FileSymfonyAdapter($this->file);
-            $fileMoved = $fileSymfonyAdapter->move($directory, $name);
+            $fileMoved = $this->file->move($directory, $name);
 
-            return new FileSymfonyAdapter($fileMoved->getFile());
+            return new FileSymfonyAdapter($fileMoved);
         } catch (CannotWriteFileException) {
             throw FileUploadCanNotWriteException::fromMessage('UPLOAD_ERR_CANT_WRITE error occurred');
         } catch (ExtensionFileException) {
