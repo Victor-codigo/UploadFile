@@ -6,7 +6,7 @@ namespace VictorCodigo\UploadFile\Domain;
 
 use VictorCodigo\UploadFile\Domain\Exception\FileException;
 
-interface UploadedFileInterface
+interface UploadedFileInterface extends FileInterface
 {
     /**
      * Returns the original file name.
