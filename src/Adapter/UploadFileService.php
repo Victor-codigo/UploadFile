@@ -29,10 +29,11 @@ use VictorCodigo\UploadFile\Domain\UploadedFileInterface;
 class UploadFileService
 {
     private string $fileName;
+    private SluggerInterface $slugger;
 
-    final public function __construct(
-        private SluggerInterface $slugger,
-    ) {
+    final public function __construct(SluggerInterface $slugger)
+    {
+        $this->slugger = $slugger;
     }
 
     /**
@@ -94,7 +95,7 @@ class UploadFileService
         $originalFileName = pathinfo($file->getClientOriginalExtension(), PATHINFO_FILENAME);
         $safeFileName = $this->slug($originalFileName);
 
-        return sprintf('%s-%s.%s', $safeFileName, $this->uniqid(), $file->guessClientExtension());
+        return sprintf('%s-%s.%s', $safeFileName, $this->uniqid(), $file->guessExtension());
     }
 
     protected function uniqid(): string
