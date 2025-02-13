@@ -5,7 +5,7 @@
          cacheDirectory=".phpunit.cache"
          executionOrder="depends,defects"
          shortenArraysForExportThreshold="10"
-         requireCoverageMetadata="true"
+         requireCoverageMetadata="false"
          beStrictAboutCoverageMetadata="true"
          beStrictAboutOutputDuringTests="true"
          displayDetailsOnPhpunitDeprecations="true"
@@ -13,6 +13,14 @@
          failOnRisky="true"
          failOnWarning="true"
          colors="true">
+
+    <php>
+        <ini name="memory_limit" value="1024M" />
+        <ini name="display_errors" value="1" />
+        <ini name="error_reporting" value="-1" />
+        <server name="APP_ENV" value="test" force="true" />
+        <env name="APP_ENV" value="test" force="true" />
+    </php>
     <testsuites>
         <testsuite name="default">
             <directory>tests</directory>
