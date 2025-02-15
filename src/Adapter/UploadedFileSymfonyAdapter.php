@@ -35,6 +35,7 @@ class UploadedFileSymfonyAdapter extends FileSymfonyAdapter implements UploadedF
         parent::__construct($uploadedFile);
     }
 
+    #[\Override]
     public function getFile(): UploadedFile
     {
         return $this->file;
