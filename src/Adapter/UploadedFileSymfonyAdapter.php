@@ -27,14 +27,17 @@ use VictorCodigo\UploadFile\Domain\UploadedFileInterface;
 
 class UploadedFileSymfonyAdapter extends FileSymfonyAdapter implements UploadedFileInterface
 {
-    /**
-     * @var UploadedFile
-     */
+    /** @var UploadedFile */
     protected File $file;
 
     public function __construct(UploadedFile $uploadedFile)
     {
         parent::__construct($uploadedFile);
+    }
+
+    public function getFile(): UploadedFile
+    {
+        return $this->file;
     }
 
     /**
