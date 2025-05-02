@@ -10,6 +10,7 @@ Classes to manage file upload with symfony or package http-foundation.
     
 ## Stack
 - [PHP 8.1](https://www.php.net/)
+- [Symfony 6.4](https://symfony.com/)
 - [PHPUnit 11.5](https://phpunit.de/index.html)
 - [PHPStan](https://phpstan.org)
 - [Composer](https://getcomposer.org/)
